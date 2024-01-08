@@ -1,0 +1,4 @@
+node/node_modules/*
+node/package_lock.json
+
+mysql/*
