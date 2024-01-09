@@ -8,6 +8,12 @@ RUN apt-get install -y apt-transport-https
 
 RUN apt-get install -y wget
 
+RUN mkdir -p /usr/src/app/node_modules && chown -R node:node /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
 COPY . .
 
 #aguarda a aplicacao subir
