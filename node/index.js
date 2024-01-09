@@ -13,8 +13,7 @@ const config = {
 const mysql = require('mysql');
 const connection = mysql.createConnection(config);
 
-
-const sqlInsert = `INSERT INTO people(name) values('` + faker.person.fullName() + `')`;
+const sqlInsert = `INSERT INTO people(name) values('` + faker.person.firstName() + `')`;
 const sqlSelect = `SELECT * FROM people`;
 let sqlResult;
 
