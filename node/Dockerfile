@@ -8,13 +8,13 @@ RUN apt-get install -y apt-transport-https
 
 RUN apt-get install -y wget
 
-RUN mkdir -p /usr/src/app/node_modules && chown -R node:node /usr/src/app
+COPY package.json ./
 
-COPY index.js /usr/src/app
-
-COPY package.json /usr/src/app
+COPY index.js ./
 
 RUN npm install
+
+RUN chown -R node:node /usr/src/app
 
 #aguarda a aplicacao subir
 ENV DOCKERIZE_VERSION v0.6.1

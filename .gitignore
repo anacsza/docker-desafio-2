@@ -1,4 +1,4 @@
 node/node_modules/*
-node/package_lock.json
+node/package-lock.json
 
 mysql/*

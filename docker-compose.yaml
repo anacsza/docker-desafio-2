@@ -11,7 +11,8 @@ services:
     command: "node index.js"
     tty: true
     volumes:
-      - ./node:/node
+      - ./node:/usr/src/app
+      - /usr/src/app/node_modules
     networks:
       - node-network
     ports:
