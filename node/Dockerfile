@@ -8,9 +8,9 @@ RUN apt-get install -y apt-transport-https
 
 RUN apt-get install -y wget
 
-COPY package.json ./
+COPY package.json /usr/src/app
 
-COPY index.js ./
+COPY index.js /usr/src/app
 
 RUN npm install
 
